@@ -23,11 +23,10 @@ public class Point {
     }
 
     public double distance() {
-        return Math.abs(
-            Math.pow(
-                Math.pow( xcor, 2) 
+        return Math.pow(
+            Math.pow( xcor, 2) 
                 + Math.pow( ycor, 2)
-            , 0.5));
+            , 0.5);
     }
 
     // -------- previously-written code ----------

@@ -1,9 +1,12 @@
 /**
   Represent a date
  */
-public class Date{
+public class Date implements Comparable<Date> {
     private int y,m,d;
     
+    public int compareTo( Object otherObj) {
+
+    }
 
     // -------- previously-written code --------
     // constructor
