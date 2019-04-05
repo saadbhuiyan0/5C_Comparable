@@ -1,12 +1,9 @@
 /**
   Represent a date
  */
-public class Date implements Comparable<Date> {
+public class Date implements Comparable {
     private int y,m,d;
     
-    public int compareTo( Object otherObj) {
-
-    }
 
     // -------- previously-written code --------
     // constructor
@@ -14,6 +11,16 @@ public class Date implements Comparable<Date> {
         this.y = y;
         this.m = m;
         this.d = d;
+    }
+
+    public int compareTo( Object otherObj) {
+        return Double.compare( 
+            ((Date)otherObj).doubleForm(),
+            this.doubleForm());
+    }
+
+    public double doubleForm() {
+        return y + 0.01 * m + 0.0001 * d;
     }
     
     /**

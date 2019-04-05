@@ -1,7 +1,7 @@
 /**
   Represent a point, using Cartesian coordinates
  */
-public class Point {
+public class Point implements Comparable {
     private double xcor;
     private double ycor;
     
