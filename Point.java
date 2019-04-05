@@ -1,7 +1,7 @@
 /**
   Represent a point, using Cartesian coordinates
  */
-public class Point{
+public class Point {
     private double xcor;
     private double ycor;
     
@@ -11,13 +11,23 @@ public class Point{
       equidistant, or farther than the Point referred to
       by the parameter.
      */
-    public int compareTo( Object otherObj){
+    public int compareTo( Object otherObj) {
         /* Use the Pythagorean theorem.
            Double.compare helped me.
            If the math is a problem, use a simpler
            relationship, like "higher is bigger"
            and change the tests accordingly */
-        return 0; // temp: all Points are One
+        return Double.compare( 
+            this.distance(),
+            ((Point)otherObj).distance());
+    }
+
+    public double distance() {
+        return Math.abs(
+            Math.pow(
+                Math.pow( xcor, 2) 
+                + Math.pow( ycor, 2)
+            , 0.5));
     }
 
     // -------- previously-written code ----------
